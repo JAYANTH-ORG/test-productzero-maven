@@ -1,7 +1,7 @@
 @Library('jenkins-shared-libs') _
 pipeline {
     agent any
-   options {
+    properties {
         choice(
             choices: ['build', 'test', 'deploy'],
             description: 'Select the option',
