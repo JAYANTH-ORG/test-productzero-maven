@@ -1,13 +1,20 @@
 @Library('jenkins-shared-libs') _
 pipeline {
     agent any
-    properties {
+    options {
         choice(
-            choices: ['build', 'test', 'deploy'],
-            description: 'Select the option',
-            name: 'Operation'
+            choices: ['build', 'test'],
+            description: 'Select an option',
+            name: 'myOption'
         )
     }
+    // properties {
+    //     choice(
+    //         choices: ['build', 'test', 'deploy'],
+    //         description: 'Select the option',
+    //         name: 'Operation'
+    //     )
+    // }
     stages {
         stage('Initialization') {
             steps {
