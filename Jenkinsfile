@@ -14,7 +14,8 @@ pipeline {
         }
          stage('Maven Build') {
             steps {
-                MvnBuild()
+                MvnBuild Operation: "${params.Operation}"
+                
             }
         }
        
