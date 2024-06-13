@@ -1,0 +1,7 @@
+{
+    "productName": "test-productzero-maven",
+    "version": "1.0.0",
+    "description": "test productzero-maven",
+    "application-type": "web",
+    "artifact-type": "maven"
+}
