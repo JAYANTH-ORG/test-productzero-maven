@@ -1,12 +1,9 @@
 @Library('jenkins-shared-libs') _
 pipeline {
     agent any
-    options {
-        choice(
-            choices: ['build', 'test'],
-            description: 'Select an option',
-            name: 'myOption'
-        )
+   parameters {
+        // string(name: 'MY_PARAM', defaultValue: 'default_value', description: 'Description for my parameter')
+        choice(name: 'Operation', choices: ['build', 'test', 'deploy'], description: 'Choose an option')
     }
     // properties {
     //     choice(
